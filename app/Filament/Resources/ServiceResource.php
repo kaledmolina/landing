@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\Textcolumn;
 use Filament\Tables;
 use App\Models\Service;
 use Filament\Forms\Form;
@@ -63,14 +64,30 @@ class ServiceResource extends Resource
     {
         return $table
             ->columns([
-                //
+               Textcolumn::make('title')
+                    ->label(__('titulo'))
+                    ->sortable()
+                    ->searchable(),
+                Textcolumn::make('icon_class')
+                    ->label(__('icon_class'))
+                    ->sortable()
+                    ->searchable(),
+                Textcolumn::make('short_desc')
+                    ->label(__('short_desc'))
+                    ->sortable()
+                    ->searchable()
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
+                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\DeleteAction::make()
+                ])
             ])
+
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
