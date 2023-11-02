@@ -43,7 +43,7 @@
 					<li class="nav-item"> <a wire:navigate class="nav-link" href="{{route('home')}}">Inicio</a></li>
 					<li class="nav-item "> <a class="nav-link" href="about.html">About Us</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('servicesPage')}}">Servicios</a></li>
-					<li class="nav-item "> <a class="nav-link" href="team.html">Our Team</a></li>
+					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('teamPage')}}">Nuestro Equipo</a></li>
 					<li class="nav-item "><a class="nav-link " href="blog.html">Blog</a></li>
 					<li class="nav-item "><a class="nav-link " href="faq.html">FAQ</a></li>
 				</ul>

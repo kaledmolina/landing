@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Filament\Resources\ServiceResource\Pages;
+namespace App\Filament\Resources\MemberResource\Pages;
 
-use App\Filament\Resources\ServiceResource;
+use App\Filament\Resources\MemberResource;
 use Filament\Actions;
 use Filament\Notifications\Notification;
 
 use Filament\Resources\Pages\CreateRecord;
 
-class CreateService extends CreateRecord
+class CreateMember extends CreateRecord
 {
-    protected static string $resource = ServiceResource::class;
+    protected static string $resource = MemberResource::class;
     protected function getRedirectUrl(): string
 {
     return $this->getResource()::getUrl('index');
@@ -19,7 +19,7 @@ protected function getCreatedNotification(): ?Notification
 {
     return Notification::make()
         ->success()
-        ->title('Servicio registrado')
-        ->body('El servicio se ha creado correctamente.');
+        ->title('Mienbro registrado')
+        ->body('El Mienbro se ha creado correctamente.');
 }
 }
