@@ -4,24 +4,25 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use Filament\Forms\Set;
+use App\Models\Article;
 use App\Models\Category;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
-use Illuminate\Support\Str;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\CategoryResource\Pages;
+use App\Filament\Resources\ArticleResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\CategoryResource\RelationManagers;
+use App\Filament\Resources\ArticleResource\RelationManagers;
 
-class CategoryResource extends Resource
+class ArticleResource extends Resource
 {
-    protected static ?string $model = Category::class;
+    protected static ?string $model = Article::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -29,18 +30,20 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')
-                    ->label(__('name'))
-                    ->live()
-                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
-                    ->autofocus()
-                    ->required()
-                    ->placeholder(__('name')),
-                TextInput::make('slug')
-                    ->label(__('slug'))
-                    ->required()
-                    ->autofocus()
-                    ->placeholder(__('slug')),
+                TextInput::make('title')
+                ->label(__('title'))
+                ->autofocus()
+                ->required()
+                ->placeholder(__('title')),
+                Select::make('category_id')->options(
+                    Category::all()->pluck('name', 'id')
+                )->label(__('category'))
+                ->required(),
+                TextInput::make('author')
+                ->label(__('author'))
+                ->autofocus()
+                ->required()
+                ->placeholder(__('author')),
                 Select::make('status')
                     ->label(__('status'))
                     ->autofocus()
@@ -49,12 +52,12 @@ class CategoryResource extends Resource
                         1 => __('activo'),
                         0 => __('inactivo'),
                     ]),
-                RichEditor::make('descripcion')
-                    ->label(__('descripcion'))
-                    ->autofocus()
-                    ->required()
-                    ->placeholder(__('descripcion'))
-                    ->columnSpan(2),
+                RichEditor::make('content')
+                        ->label(__('content'))
+                        ->autofocus()
+                        ->required()
+                        ->placeholder(__('content')),
+                FileUpload::make('image'),
             ]);
     }
 
@@ -62,12 +65,15 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')
-                    ->label(__('name'))
+                Imagecolumn::make('image')
+                    ->label(__('image'))
+                    ->width('100'),
+                TextColumn::make('title')
+                    ->label(__('title'))
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('slug')
-                    ->label(__('slug'))
+                TextColumn::make('author')
+                    ->label(__('author'))
                     ->searchable()
                     ->sortable(),
             ])
@@ -101,9 +107,9 @@ class CategoryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCategories::route('/'),
-            'create' => Pages\CreateCategory::route('/create'),
-            'edit' => Pages\EditCategory::route('/{record}/edit'),
+            'index' => Pages\ListArticles::route('/'),
+            'create' => Pages\CreateArticle::route('/create'),
+            'edit' => Pages\EditArticle::route('/{record}/edit'),
         ];
     }
 }
