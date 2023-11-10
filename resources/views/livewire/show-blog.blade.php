@@ -5,7 +5,7 @@
                 <div class="col-8 mx-auto text-center">
                     <h2 class="mb-3 text-capitalize">Blog</h2>
                     <ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
-                        <li class="list-inline-item"><a href="index.html">Home</a>
+                        <li class="list-inline-item"><a wire:navigate href="{{route('home')}}">Home</a>
                         </li>
                         <li class="list-inline-item">/ &nbsp; <a href="blog.html">Blog</a>
                         </li>
@@ -62,25 +62,7 @@
                                 @endforeach 
                             @endif
                             <div class="col-12">
-                                <nav class="mt-4">
-                                    <!-- pagination -->
-                                    <nav class="mb-md-50">
-                                        <ul class="pagination justify-content-center">
-                                            <li class="page-item active "> <a href="blog.html" class="page-link">
-                            1
-                          </a>
-                                            </li>
-                                            <li class="page-item"> <a href="blog.html" class="page-link">
-                            2
-                          </a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="blog.html" aria-label="Pagination Arrow"> <i class="fas fa-angle-right"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </nav>
+                                {{ $articles->links() }}
                             </div>
                         </div>
                     </div>
@@ -92,7 +74,7 @@
                         <ul class="list-unstyled widget-list">
                             @if ($categories->isNotEmpty())
                                 @foreach ($categories as $category)
-                                    <li><a href="#">{{ $category->name }}</a>
+                                    <li><a wire:navigate href="{{route('blog').'?categoySlug='.$category->slug}}">{{ $category->name }}</a>
                                     </li>
                                 @endforeach                                
                             @endif	                            
@@ -122,45 +104,28 @@
                     <div class="widget">
                         <h5 class="widget-title"><span>Latest Article</span></h5>
                         <!-- post-item -->
-                        <ul class="list-unstyled widget-list">
-                            <li class="d-flex widget-post align-items-center">
-                                <a class="text-black" href="/blog/elements/">
-                                    <div class="widget-post-image flex-shrink-0 me-3">
-                                        <img class="rounded" loading="lazy" decoding="async" src="images/blog/post-4.jpg" alt="Post Thumbnail">
+                        @if ($latestearticles->isNotEmpty())
+                            @foreach ($latestearticles as $latestearticle)
+                            <ul class="list-unstyled widget-list">
+                                <li class="d-flex widget-post align-items-center">
+                                    <a class="text-black" href="/blog/elements/">
+                                        <div class="widget-post-image flex-shrink-0 me-3">
+                                            @if ($article->image != "")
+                                                <img loading="lazy" decoding="async" src="{{ asset('storage/'.$latestearticle->image) }}" alt="Post Thumbnail">
+                                                
+                                            @endif
+                                        </div>
+                                    </a>
+                                    <div class="flex-grow-1">
+                                        <h5 class="h6 mb-0"><a class="text-black" href="blog-details.html"> {{$latestearticle->title}} </a></h5>
+                                        <small> {{ \Carbon\Carbon::parse($latestearticle->created_at)->format( 'd M, Y' ) }}</small>
                                     </div>
-                                </a>
-                                <div class="flex-grow-1">
-                                    <h5 class="h6 mb-0"><a class="text-black" href="blog-details.html">Elements That You Can Use To Create A New Post On This Template.</a></h5>
-                                    <small>March 15, 2020</small>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled widget-list">
-                            <li class="d-flex widget-post align-items-center">
-                                <a class="text-black" href="/blog/post-1/">
-                                    <div class="widget-post-image flex-shrink-0 me-3">
-                                        <img class="rounded" loading="lazy" decoding="async" src="images/blog/post-1.jpg" alt="Post Thumbnail">
-                                    </div>
-                                </a>
-                                <div class="flex-grow-1">
-                                    <h5 class="h6 mb-0"><a class="text-black" href="blog-details.html">Cheerful Loving Couple Bakers Drinking Coffee</a></h5>
-                                    <small>March 14, 2020</small>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled widget-list">
-                            <li class="d-flex widget-post align-items-center">
-                                <a class="text-black" href="/blog/post-2/">
-                                    <div class="widget-post-image flex-shrink-0 me-3">
-                                        <img class="rounded" loading="lazy" decoding="async" src="images/blog/post-2.jpg" alt="Post Thumbnail">
-                                    </div>
-                                </a>
-                                <div class="flex-grow-1">
-                                    <h5 class="h6 mb-0"><a class="text-black" href="blog-details.html">Cheerful Loving Couple Bakers Drinking Coffee</a></h5>
-                                    <small>March 14, 2020</small>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>                                
+                            @endforeach                            
+                        @endif
+                        
+                        
                     </div>
                     <!-- Social -->
                     
