@@ -41,7 +41,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav m-auto mb-2 mb-lg-0">
 					<li class="nav-item"> <a wire:navigate class="nav-link" href="{{route('home')}}">Inicio</a></li>
-					<li class="nav-item "> <a class="nav-link" href="about.html">About Us</a></li>
+					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('Page',2)}}">Sobre mi</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('servicesPage')}}">Servicios</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('teamPage')}}">Nuestro Equipo</a></li>
 					<li class="nav-item "><a wire:navigate class="nav-link " href="{{route('blog')}}">Blog</a></li>
@@ -81,7 +81,7 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Quick Links</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="#!">About Us</a>
+						<li class="mb-2"><a wire:navigate href="{{route('Page',2)}}">Sobre mi</a>
 						</li>
 						<li class="mb-2"><a href="#!">Contact Us</a>
 						</li>
@@ -96,9 +96,9 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Other Links</h5>
 					<ul class="list-unstyled">
-						<li class="list-inline-item me-4"><a class="text-black" href="privacy-policy.html">Privacy Policy</a>
+						<li class="list-inline-item me-4"><a class="text-black" wire:navigate href="{{route('Page',6)}}">Privacidad</a>
                         </li>
-						<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terms &amp; Conditions</a>
+						<li class="list-inline-item me-4"><a class="text-black" wire:navigate href="{{route('Page',5)}}">Terminos &amp; condiciones</a>
                         </li>
 					</ul>
 				</div>
