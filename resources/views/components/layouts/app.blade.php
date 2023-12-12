@@ -81,7 +81,7 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Quick Links</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a wire:navigate href="{{route('Page',2)}}">Sobre mi</a>
+						<li class="mb-2"><a wire:navigate href="{{route('Page',2)}}">Sobre nosotroz</a>
 						</li>
 						<li class="mb-2"><a href="#!">Contact Us</a>
 						</li>
