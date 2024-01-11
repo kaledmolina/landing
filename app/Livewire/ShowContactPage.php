@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\FormContact;
 use Livewire\Component;
 
 class ShowContactPage extends Component
@@ -18,8 +19,12 @@ class ShowContactPage extends Component
 
 
     public function submit(){
-        $this->validate();
-        
+        $form = FormContact::create([
+            'name' => $this->name,
+            'email' => $this->email,
+            'message' => $this->message,
+        ]);
+        $this->reset();
     }
 
     public function render()

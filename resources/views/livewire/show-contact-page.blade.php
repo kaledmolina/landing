@@ -53,7 +53,7 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="contact-form">
-								<form wire:submit ="submit"   >
+								<form wire:submit ="submit" >
 									<div class="form-group mb-4 pb-2">
 										<label for="name" class="form-label">Full Name</label>
 										<input wire:model="name"  type="text" class="form-control shadow-none @error('name') is-invalid @enderror " id="nama" name="name">
