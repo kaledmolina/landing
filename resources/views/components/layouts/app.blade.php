@@ -4,12 +4,12 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>{{ $title ?? 'Page Title' }}</title>
+	<title>{{ $title ?? 'Kaled Molina' }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	<meta name="description" content="This is meta description">
 	<meta name="author" content="Themefisher">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="/frontend/images/favicon.ico" type="image/x-icon">
 
 	<!-- # Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,7 @@
 	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
 		<div class="container">
 			<a class="navbar-brand" wire:navigate href="{{route('home')}}">
-				<img loading="prelaod" decoding="async" class="img-fluid" width="160" src="{{asset('/frontend/images/logo.png')}}" alt="Wallet">
+				<img border-radio:"100%" loading="prelaod" decoding="async" class="img-fluid" width="125" src="{{asset('/frontend/images/logo.png')}}" alt="Wallet">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 			</button>
@@ -64,8 +64,13 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Service</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="service-details.html">Digital Marketing</a>
+                        @foreach (getService() as $service)
+
+						<li class="mb-2"><a wire:navigate href=" {{ route('servicePage',$service) }} "> {{$service->title}} </a>
 						</li>
+                        @endforeach
+
+                        <!--
 						<li class="mb-2"><a href="service-details.html">Web Design</a>
 						</li>
 						<li class="mb-2"><a href="service-details.html">Logo Design</a>
@@ -74,6 +79,7 @@
 						</li>
 						<li class="mb-2"><a href="service-details.html">SEO</a>
 						</li>
+-->
 					</ul>
 				</div>
 			</div>
@@ -83,11 +89,11 @@
 					<ul class="list-unstyled">
 						<li class="mb-2"><a wire:navigate href="{{route('Page',2)}}">Sobre nosotros</a>
 						</li>
-						<li class="mb-2"><a href="#!">Contact Us</a>
+						<li class="mb-2"><a wire:navigate href="{{route('contact')}}">Contactanos</a>
 						</li>
-						<li class="mb-2"><a href="#!">Blog</a>
+						<li class="mb-2"><a wire:navigate href="{{route('blog' )}}">Blog</a>
 						</li>
-						<li class="mb-2"><a href="#!">Team</a>
+						<li class="mb-2"><a wire:navigate href="{{route('teamPage')}}">Team</a>
 						</li>
 					</ul>
 				</div>

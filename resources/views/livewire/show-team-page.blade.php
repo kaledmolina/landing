@@ -48,7 +48,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row position-relative">
+		<div class="row position-relative justify-content-center ">
 
                 @if ($members->isNotEmpty())
 

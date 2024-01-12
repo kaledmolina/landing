@@ -40,39 +40,45 @@
 		<div class="row justify-content-center align-items-center">
 			<div class="col-lg-6">
 				<div class="section-title text-center">
-					<p class="text-primary text-uppercase fw-bold mb-3">Contact With us</p>
-					<h1>let&rsquo;s get connected</h1>
+					<p class="text-primary text-uppercase fw-bold mb-3">CONTACTAR CON NOSOTROS</p>
+					<h1>Vamos a conyactarnos</h1>
 					<p>Lorem ipsum dolor sit, consectetur adipiscing . egestas cursus pellentesque dignissim dui, congue etiam</p>
 				</div>
 			</div>
 			<div class="col-lg-10">
 				<div class="shadow rounded p-5 bg-white">
+                    @if(session('success'))
+                    <div class="alert alert-success">
+                        {{session('success')}}
+                    </div>
+                    @endif
 					<div class="row">
 						<div class="col-12 mb-4">
-							<h4>Leave Us A Message</h4>
+							<h4>Déjanos un mensaje</h4>
 						</div>
 						<div class="col-lg-6">
 							<div class="contact-form">
 								<form wire:submit ="submit" >
 									<div class="form-group mb-4 pb-2">
-										<label for="name" class="form-label">Full Name</label>
+										<label for="name" class="form-label">   Nombre Completo</label>
 										<input wire:model="name"  type="text" class="form-control shadow-none @error('name') is-invalid @enderror " id="nama" name="name">
                                         @error('name')
                                         <p class="invalid-feedback">{{$message}}</p>
                                         @enderror
 									</div>
 									<div class="form-group mb-4 pb-2">
-										<label for="email" class="form-label">Email address</label>
+										<label for="email" class="form-label"> Correo Electronico</label>
 										<input  wire:model="email" type="email" class="form-control shadow-none @error('email') is-invalid @enderror " id="email" name="email">
                                         @error('email')
                                         <p class="invalid-feedback">{{$message}}</p>
                                         @enderror
 									</div>
 									<div class="form-group mb-4 pb-2">
-										<label for="message" class="form-label">Write Message</label>
+										<label for="message" class="form-label">Deja tu mensaje..</label>
 										<textarea wire:model="message" class="form-control shadow-none" id="message" name="message" rows="3"></textarea>
 									</div>
-									<button class="btn btn-primary w-100" type="submit">Send Message</button>
+                                    
+									<button class="btn btn-primary w-100" type="submit">Enviar mensaje</button>
 								</form>
 							</div>
 						</div>
