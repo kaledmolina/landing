@@ -23,7 +23,7 @@
        @endif
     </div>
     <div class="card-body">
-        <h3>{{$member->name}} dfd</h3>
-        <p>{{$member->designation}}sw</p>
+        <h3>{{$member->name}}  </h3>
+        <p>{{$member->designation}} </p>
     </div>
 </div>

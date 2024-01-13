@@ -34,20 +34,20 @@
 	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
 		<div class="container">
 			<a class="navbar-brand" wire:navigate href="{{route('home')}}">
-				<img border-radio:"100%" loading="prelaod" decoding="async" class="img-fluid" width="125" src="{{asset('/frontend/images/logo.png')}}" alt="Wallet">
+				<img border-radio:"100%" loading="prelaod" decoding="async" class="img-fluid" width="150" src="{{asset('/frontend/images/logo.png')}}" alt="Wallet">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav m-auto mb-2 mb-lg-0">
 					<li class="nav-item"> <a wire:navigate class="nav-link" href="{{route('home')}}">Inicio</a></li>
-					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('Page',2)}}">Sobre mi</a></li>
+					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('Page',2)}}">Nosotros</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('servicesPage')}}">Servicios</a></li>
-					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('teamPage')}}">Nuestro Equipo</a></li>
-					<li class="nav-item "><a wire:navigate class="nav-link " href="{{route('blog')}}">Blog</a></li>
+					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('teamPage')}}">Equipo</a></li>
+					<li class="nav-item "><a wire:navigate class="nav-link " href="{{route('blog')}}">Proyectos</a></li>
 					<li class="nav-item "><a wire:navigate class="nav-link " href="{{route('faqPage')}}">FAQ</a></li>
 				</ul>
-				<a wire:navigate href="{{route('contact')}}" class="btn btn-outline-primary">Contact Us</a>
+				<a wire:navigate href="{{route('contact')}}" class="btn btn-outline-primary">Contactanos</a>
 			</div>
 		</div>
 	</nav>
@@ -62,7 +62,7 @@
 		<div class="row justify-content-between">
 			<div class="col-lg-2 col-md-4 col-6 mb-4">
 				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Service</h5>
+					<h5 class="mb-4 text-primary font-secondary">Servicios</h5>
 					<ul class="list-unstyled">
                         @foreach (getService() as $service)
 
@@ -85,22 +85,22 @@
 			</div>
 			<div class="col-lg-2 col-md-4 col-6 mb-4">
 				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Quick Links</h5>
+					<h5 class="mb-4 text-primary font-secondary">Contenido</h5>
 					<ul class="list-unstyled">
 						<li class="mb-2"><a wire:navigate href="{{route('Page',2)}}">Sobre nosotros</a>
 						</li>
 						<li class="mb-2"><a wire:navigate href="{{route('contact')}}">Contactanos</a>
 						</li>
-						<li class="mb-2"><a wire:navigate href="{{route('blog' )}}">Blog</a>
+						<li class="mb-2"><a wire:navigate href="{{route('blog' )}}">Proyectos</a>
 						</li>
-						<li class="mb-2"><a wire:navigate href="{{route('teamPage')}}">Team</a>
+						<li class="mb-2"><a wire:navigate href="{{route('teamPage')}}">Equipo</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-lg-2 col-md-4 col-6 mb-4">
 				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Other Links</h5>
+					<h5 class="mb-4 text-primary font-secondary">Nuestras Politicas</h5>
 					<ul class="list-unstyled">
 						<li class="list-inline-item me-4"><a class="text-black" wire:navigate href="{{route('Page',6)}}">Privacidad</a>
                         </li>

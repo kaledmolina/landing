@@ -41,10 +41,10 @@
 		<div class="row justify-content-center">
 			<div class="col-12">
 				<div class="section-title text-center">
-					<p class="text-primary text-uppercase fw-bold mb-3">Questions You Have</p>
-					<h1>People Behind Us</h1>
-					<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing . egestas
-						<br>cursus pellentesque dignissim dui, congue. Vel etiam ut</p>
+					<p class="text-primary text-uppercase fw-bold mb-3"> <a wire:navigate href=" {{route('contact')}} ">Tienes alguna duda?</a>  </p>
+					<h1>Personal detras de Nosotros!</h1>
+					<p class="mb-0">Cada miembro de nuestro equipo aporta una combinación única de habilidades técnicas y creatividad, trabajando de la mano para dar vida a tu visión digital.
+						<br>Nuestro equipo está compuesto por expertos multidisciplinarios que abarcan desde desarrolladores front-end altamente creativos hasta ingenieros back-end centrados en la eficiencia y seguridad.</p>
 				</div>
 			</div>
 		</div>

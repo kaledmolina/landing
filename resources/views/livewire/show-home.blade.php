@@ -4,9 +4,9 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="block text-center text-lg-start pe-0 pe-xl-5">
-            <h1 class="text-capitalize mb-4">Innovate. Excel. Succeed!</h1>
-            <p class="mb-4">Unlocking Potential, Igniting Excellence</p> <a type="button"
-              class="btn btn-primary" href=" {{route('servicesPage')}} " wire:navigate >See More<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
+            <h1 class="text-capitalize mb-4">¡Bienvenido a nuestro mundo de desarrollo web!</h1>
+            <p class="mb-4">Somos un equipo apasionado de desarrolladores web especializados en Laravel, la elegante y poderosa framework de PHP que nos permite crear aplicaciones web robustas y eficientes. En nuestro viaje hacia la excelencia digital, nos esforzamos por ofrecer soluciones que no solo cumplan con las expectativas, sino que las superen.</p> <a type="button"
+              class="btn btn-primary" href=" {{route('servicesPage')}} " wire:navigate >Proyectos<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -70,9 +70,9 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="section-title pt-4">
-            <p class="text-primary text-uppercase fw-bold mb-3">Our Services</p>
-            <h1>Our online services</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipreiscing elit. Lacus penatibus tincidunt</p>
+            <p class="text-primary text-uppercase fw-bold mb-3">Nuestros Servicios</p>
+            <h1>Desarrollo a medida</h1>
+            <p>Desde el concepto hasta la implementación, nos especializamos en el desarrollo a medida para garantizar que cada proyecto se ajuste perfectamente a las necesidades específicas de nuestros clientes.</p>
           </div>
         </div>
         @if ($services->isNotEmpty())

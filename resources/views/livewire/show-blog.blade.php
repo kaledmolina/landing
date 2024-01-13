@@ -3,11 +3,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-8 mx-auto text-center">
-                    <h2 class="mb-3 text-capitalize">Blog</h2>
+                    <h2 class="mb-3 text-capitalize">Proyectos</h2>
                     <ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
-                        <li class="list-inline-item"><a wire:navigate href="{{route('home')}}">Home</a>
+                        <li class="list-inline-item"><a wire:navigate href="{{route('home')}}">Inicio</a>
                         </li>
-                        <li class="list-inline-item">/ &nbsp; <a href="blog.html">Blog</a>
+                        <li class="list-inline-item">/ &nbsp; <a href=>Proyectos</a>
                         </li>
                     </ul>
                 </div>
@@ -33,7 +33,7 @@
             </svg>
         </div>
     </section>
-    
+
     <section class="section">
         <div class="container">
             <div class="row">
@@ -41,25 +41,25 @@
                     <div class="me-lg-4">
                         <div class="row gy-5">
                             @if ($articles->isNotEmpty())
-                               @foreach ( $articles as $article )                           
+                               @foreach ( $articles as $article )
                                 <div class="col-md-6" data-aos="fade">
                                     <article class="blog-post">
                                         <div class="post-slider slider-sm rounded">
                                             {{-- <img loading="lazy" decoding="async" src="images/blog/post-4.jpg" alt="Post Thumbnail"> --}}
                                             @if ($article->image != "")
                                                 <img loading="lazy" decoding="async" src="{{ asset('storage/'.$article->image) }}" alt="Post Thumbnail">
-                                                
+
                                             @endif
-                                            
+
                                         </div>
                                         <div class="pt-4">
                                             <p class="mb-3"> {{ \Carbon\Carbon::parse($article->created_at)->format( 'd M, Y' ) }} </p>
                                             <h2 class="h4"><a class="text-black" wire:navigate href=" {{route('blogDetail',$article->id)}} ">{{ $article->title }}</a></h2>
-                                            <a wire:navigate href=" {{route('blogDetail',$article->id)}} " class="text-primary fw-bold" aria-label="Read the full article by clicking here">Read More</a>
+                                            <a wire:navigate href=" {{route('blogDetail',$article->id)}} " class="text-primary fw-bold" aria-label="Read the full article by clicking here">Leer Mas!</a>
                                         </div>
                                     </article>
                                 </div>
-                                @endforeach 
+                                @endforeach
                             @endif
                             <div class="col-12">
                                 {{ $articles->links() }}
@@ -70,39 +70,21 @@
                 <div class="col-lg-3">
                     <!-- categories -->
                     <div class="widget widget-categories">
-                        <h5 class="widget-title"><span>Category</span></h5>
+                        <h5 class="widget-title"><span>Categorias</span></h5>
                         <ul class="list-unstyled widget-list">
                             @if ($categories->isNotEmpty())
                                 @foreach ($categories as $category)
                                     <li><a wire:navigate href="{{route('blog').'?categoySlug='.$category->slug}}">{{ $category->name }}</a>
                                     </li>
-                                @endforeach                                
-                            @endif	                            
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
                     <!-- tags -->
-                    <div class="widget widget-tags">
-                        <h4 class="widget-title"><span>Tags</span></h4>
-                        <ul class="list-inline widget-list widget-list-inline taxonomies-list">
-                            <li class="list-inline-item"><a href="#!">Booth</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">City</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">Image</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">New</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">Photo</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">Seasone</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">Video</a>
-                            </li>
-                        </ul>
-                    </div>
+
                     <!-- latest post -->
                     <div class="widget">
-                        <h5 class="widget-title"><span>Latest Article</span></h5>
+                        <h5 class="widget-title"><span>Ultimos Proyectos</span></h5>
                         <!-- post-item -->
                         @if ($latestearticles->isNotEmpty())
                             @foreach ($latestearticles as $latestearticle)
@@ -112,7 +94,7 @@
                                         <div class="widget-post-image flex-shrink-0 me-3">
                                             @if ($article->image != "")
                                                 <img loading="lazy" decoding="async" src="{{ asset('storage/'.$latestearticle->image) }}" alt="Post Thumbnail">
-                                                
+
                                             @endif
                                         </div>
                                     </a>
@@ -121,14 +103,14 @@
                                         <small> {{ \Carbon\Carbon::parse($latestearticle->created_at)->format( 'd M, Y' ) }}</small>
                                     </div>
                                 </li>
-                            </ul>                                
-                            @endforeach                            
+                            </ul>
+                            @endforeach
                         @endif
-                        
-                        
+
+
                     </div>
                     <!-- Social -->
-                    
+
                 </div>
             </div>
         </div>
