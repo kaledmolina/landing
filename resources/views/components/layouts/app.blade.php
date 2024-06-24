@@ -41,13 +41,13 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav m-auto mb-2 mb-lg-0">
 					<li class="nav-item"> <a wire:navigate class="nav-link" href="{{route('home')}}">Inicio</a></li>
-					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('Page',2)}}">Nosotros</a></li>
+					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('Page',2)}}">Sobre mi</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('servicesPage')}}">Servicios</a></li>
-					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('teamPage')}}">Equipo</a></li>
+					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('teamPage')}}">Habilidades</a></li>
 					<li class="nav-item "><a wire:navigate class="nav-link " href="{{route('blog')}}">Proyectos</a></li>
 					<li class="nav-item "><a wire:navigate class="nav-link " href="{{route('faqPage')}}">FAQ</a></li>
 				</ul>
-				<a wire:navigate href="{{route('contact')}}" class="btn btn-outline-primary">Contactanos</a>
+				<a wire:navigate href="{{route('contact')}}" class="btn btn-outline-primary">Contacto</a>
 			</div>
 		</div>
 	</nav>
@@ -87,13 +87,13 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Contenido</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a wire:navigate href="{{route('Page',2)}}">Sobre nosotros</a>
+						<li class="mb-2"><a wire:navigate href="{{route('Page',2)}}">Sobre mi</a>
 						</li>
-						<li class="mb-2"><a wire:navigate href="{{route('contact')}}">Contactanos</a>
+						<li class="mb-2"><a wire:navigate href="{{route('contact')}}">Contacto</a>
 						</li>
 						<li class="mb-2"><a wire:navigate href="{{route('blog' )}}">Proyectos</a>
 						</li>
-						<li class="mb-2"><a wire:navigate href="{{route('teamPage')}}">Equipo</a>
+						<li class="mb-2"><a wire:navigate href="{{route('teamPage')}}">Habilidades</a>
 						</li>
 					</ul>
 				</div>

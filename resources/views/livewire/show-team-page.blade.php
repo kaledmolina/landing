@@ -4,11 +4,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize">Equipo</h2>
+				<h2 class="mb-3 text-capitalize">Habilidades</h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
 					<li class="list-inline-item"><a  wire:navigate href="{{route('home')}}">Inicio</a>
 					</li>
-					<li class="list-inline-item">/ &nbsp; <a href="#">Nuestro Equipo</a>
+					<li class="list-inline-item">/ &nbsp; <a href="#">Mis Habilidades</a>
 					</li>
 				</ul>
 			</div>

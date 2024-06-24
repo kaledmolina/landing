@@ -4,8 +4,8 @@
           <div class="row justify-content-center mb-5">
             <div class="col-lg-6">
               <div class="section-title text-center">
-                <p class="text-primary text-uppercase fw-bold mb-3">Frequient Questions</p>
-                <h1>Frequently Asked Questions</h1>
+                <p class="text-primary text-uppercase fw-bold mb-3">Preguntas frecuentes</p>
+                <h1>Preguntas frecuentes de empresas</h1>
               </div>
             </div>
           </div>
@@ -16,13 +16,13 @@
                     @php
                         $x = 1;
                     @endphp
-                    @foreach ($faqs as $faq)                        
+                    @foreach ($faqs as $faq)
                         <div class="accordion-item">
                         <h2 class="accordion-header accordion-button h5 border-0 "
                             id="heading-{{$x}}" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse-{{$x}}" aria-expanded="true"
                             aria-controls="collapse-{{$x}}">
-                            {!! $faq->question !!} 
+                            {!! $faq->question !!}
                         </h2>
                         <div id="collapse-{{$x}}"
                             class="accordion-collapse collapse border-0 "
@@ -32,10 +32,10 @@
                         </div>
                         @php
                             $x++;
-                        @endphp    
-                    @endforeach                    
+                        @endphp
+                    @endforeach
                 @endif
-                
+
               </div>
             </div>
           </div>
