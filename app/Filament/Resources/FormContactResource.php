@@ -8,7 +8,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use App\Models\FormContact;
 use Filament\Resources\Resource;
-use Filament\Tables\Columns\Textcolumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
 
