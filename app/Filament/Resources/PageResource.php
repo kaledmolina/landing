@@ -14,7 +14,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
-use Filament\Tables\Columns\Textcolumn;
+use Filament\Tables\Columns\TextColumn;
 
 use App\Filament\Resources\PageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
