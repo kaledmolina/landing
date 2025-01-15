@@ -64,11 +64,14 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Servicios</h5>
 					<ul class="list-unstyled">
-                        @foreach (getService() as $service)
-
-						<li class="mb-2"><a wire:navigate href=" {{ route('servicePage',$service) }} "> {{$service->title}} </a>
-						</li>
+                        @foreach (getService()->take(3) as $service)
+                            <li class="mb-2">
+                                <a wire:navigate href="{{ route('servicePage', $service) }}">
+                                    {{ $service->title }}
+                                </a>
+                            </li>
                         @endforeach
+
 
                         <!--
 						<li class="mb-2"><a href="service-details.html">Web Design</a>
