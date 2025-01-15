@@ -10,7 +10,7 @@ use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Tables\Columns\Textcolumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\FileUpload;
 use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Database\Eloquent\Builder;
