@@ -93,12 +93,11 @@
 						</li>
 						<li class="mb-2"><a wire:navigate href="{{route('blog' )}}">Proyectos</a>
 						</li>
-						<li class="mb-2"><a wire:navigate href="{{route('teamPage')}}">Habilidades</a>
-						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
+        
 
 	</div>
 </footer>
