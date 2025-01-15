@@ -19,6 +19,8 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ArticleResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ArticleResource\RelationManagers;
+use Filament\Tables\Columns\TextColumn;
+
 
 class ArticleResource extends Resource
 {
