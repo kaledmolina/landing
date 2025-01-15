@@ -98,17 +98,6 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg-2 col-md-4 col-6 mb-4">
-				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Nuestras Politicas</h5>
-					<ul class="list-unstyled">
-						<li class="list-inline-item me-4"><a class="text-black" wire:navigate href="{{route('Page',6)}}">Privacidad</a>
-                        </li>
-						<li class="list-inline-item me-4"><a class="text-black" wire:navigate href="{{route('Page',5)}}">Terminos &amp; condiciones</a>
-                        </li>
-					</ul>
-				</div>
-			</div>
 		</div>
 
 	</div>
