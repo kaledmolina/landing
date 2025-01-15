@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Forms\Components\Select;
-use Filament\Tables\Columns\Textcolumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables;
 use App\Models\Service;
 use Filament\Forms\Form;
