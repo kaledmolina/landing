@@ -41,13 +41,7 @@
 		<div class="row justify-content-center">
 			<section class="skills-section py-5">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-6 col-md-8 text-center">
-                                <img src="ruta_de_la_imagen.jpg" alt="Foto de perfil" class="img-fluid rounded-circle mb-4" style="width: 150px; height: 150px;">
-                                <h3 class="text-capitalize">Tu Nombre</h3>
-                                <p class="text-muted">Desarrollador web con experiencia en PHP, JavaScript, Laravel, React y más.</p>
-                            </div>
-                        </div>
+                        
                         <div class="row justify-content-center mt-4">
                             <div class="col-lg-8">
                                 <h4 class="mb-3">Habilidades principales</h4>
