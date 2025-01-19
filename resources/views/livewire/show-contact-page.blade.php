@@ -23,7 +23,6 @@
 			<div class="col-lg-6">
 				<div class="section-title text-center">
 					<p class="text-primary text-uppercase fw-bold mb-3">CONTACTAR CON NOSOTROS</p>
-					<h1>Vamos a conctarnos</h1>
 					<p>Ingresa tus datos para asi poder contactarnos</p>
 				</div>
 			</div>
