@@ -15,10 +15,7 @@
 		</div>
 	</div>
 </section>
-
-
 <section class="section teams">
-	<div class="container">
 		<div class="row justify-content-center">
 			<section class="skills-section ">
                         <div class="row justify-content-center">
@@ -37,7 +34,6 @@
                             </div>                        
                     </div>
             </section>
-		</div>
 		<div class="row position-relative justify-content-center ">
 
                 @if ($members->isNotEmpty())
