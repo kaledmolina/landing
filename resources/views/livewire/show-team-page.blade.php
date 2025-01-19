@@ -39,8 +39,8 @@
 <section class="section teams">
 	<div class="container">
 		<div class="row justify-content-center">
-			<section class="skills-section py-5">
-                        <div class="row justify-content-center mt-4">
+			<section class="skills-section ">
+                        <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <h4 class="mb-3">Habilidades principales</h4>
                                 <ul class="list-unstyled">
