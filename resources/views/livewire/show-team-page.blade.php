@@ -40,7 +40,6 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<section class="skills-section py-5">
-                    <div class="container">                        
                         <div class="row justify-content-center mt-4">
                             <div class="col-lg-8">
                                 <h4 class="mb-3">Habilidades principales</h4>
@@ -54,8 +53,7 @@
                                 <li>✔️ Creación de aplicaciones móviles multiplataforma con Flutter</li>
 
                                 </ul>
-                            </div>
-                        </div>
+                            </div>                        
                     </div>
             </section>
 		</div>
