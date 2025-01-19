@@ -40,16 +40,19 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<section class="skills-section py-5">
-                    <div class="container">
-                        
+                    <div class="container">                        
                         <div class="row justify-content-center mt-4">
                             <div class="col-lg-8">
                                 <h4 class="mb-3">Habilidades principales</h4>
                                 <ul class="list-unstyled">
-                                    <li>✔️ Desarrollo de aplicaciones web con Laravel y Livewire</li>
-                                    <li>✔️ Frontend con Tailwind CSS y Alpine.js</li>
-                                    <li>✔️ Gestión de servidores y despliegues en AWS</li>
-                                    <li>✔️ Diseño de interfaces adaptables y optimización de UX</li>
+                                <li>✔️ Integracion API RESTful </li>
+                                <li>✔️ Desarrollo de aplicaciones web con Laravel y Livewire</li>
+                                <li>✔️ Frontend con Tailwind CSS y Alpine.js</li>
+                                <li>✔️ Gestión de servidores y despliegues en AWS</li>
+                                <li>✔️ Diseño de interfaces adaptables y optimización de UX</li>
+                                <li>✔️ Desarrollo de interfaces dinámicas con React</li>
+                                <li>✔️ Creación de aplicaciones móviles multiplataforma con Flutter</li>
+
                                 </ul>
                             </div>
                         </div>
