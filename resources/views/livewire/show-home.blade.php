@@ -4,7 +4,7 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="block text-center text-lg-start pe-0 pe-xl-5">
-            <h1 class="text-capitalize mb-4">¡Bienvenido a mi mundo de desarrollo web!</h1>
+            <h1 class="text-capitalize mb-4">¡Bienvenido!</h1>
             <p class="mb-4">Soy Kaled Molina, ingeniero y desarrollador web especializado en Laravel, con más de dos años de experiencia creando aplicaciones web robustas y eficientes. Además de Laravel, domino tecnologías como PHP puro, JavaScript, React, Dart/Flutter, Tailwind CSS y bases de datos MySQL. Mi enfoque combina excelencia técnica y diseño atractivo, asegurando soluciones digitales innovadoras que superan expectativas y brindan experiencias de usuario excepcionales.</p> <a type="button"
               class="btn btn-primary" href=" {{route('blog')}} " wire:navigate >Proyectos<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
           </div>
