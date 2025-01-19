@@ -8,7 +8,7 @@
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
 					<li class="list-inline-item"><a wire:navigate href="{{route('home')}}">Inicio</a>
 					</li>
-					<li class="list-inline-item">/ &nbsp; <a href="contact.html">Contact</a>
+					<li class="list-inline-item">/ &nbsp; <a href="#">Contactanos</a>
 					</li>
 				</ul>
 			</div>
