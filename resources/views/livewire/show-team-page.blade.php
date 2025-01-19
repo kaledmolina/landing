@@ -22,12 +22,13 @@
                             <div class="col-lg-8">
                                 <h4 class="mb-3">Habilidades principales</h4>
                                 <ul class="list-unstyled">
+                                <li>✔️ Desarrollo de interfaces dinámicas con React</li>
+                               <li>✔️ Diseño, desarrollo y destion de bases de datos relacionales</li>
                                 <li>✔️ Integracion API RESTful </li>
                                 <li>✔️ Desarrollo de aplicaciones web con Laravel y Livewire</li>
                                 <li>✔️ Frontend con Tailwind CSS y Alpine.js</li>
                                 <li>✔️ Gestión de servidores y despliegues en AWS</li>
-                                <li>✔️ Diseño de interfaces adaptables y optimización de UX</li>
-                                <li>✔️ Desarrollo de interfaces dinámicas con React</li>
+                                <li>✔️ Diseño de interfaces adaptables y optimización de UX</li>                                
                                 <li>✔️ Creación de aplicaciones móviles multiplataforma con Flutter</li>
 
                                 </ul>
